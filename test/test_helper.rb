@@ -6,4 +6,7 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  reporter_options = { color: true, slow_count: 5 }
+  Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_options)]
+
 end
